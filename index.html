@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLN Consulting Group - Strategic Solutions for Business Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F9FC; /* Light neutral background */
+            color: #1A202C; /* Dark gray for text */
+        }
+        .hero-bg {
+            background-color: #1A202C; /* Dark background for hero */
+            background-image: linear-gradient(to right, rgba(26, 32, 44, 0.95), rgba(49, 56, 70, 0.85)), url('https://placehold.co/1920x1080/2D3748/E2E8F0?text=Modern+Office+Background');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #63B3ED; /* Accent blue */
+        }
+        .team-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            background-color: #EBF8FF; /* Light blue for icon bg */
+            color: #3182CE; /* Accent blue for icon */
+            border-radius: 50%;
+            padding: 0.75rem; /* 12px */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem; /* 48px */
+            height: 3rem; /* 48px */
+            margin-bottom: 1rem; /* 16px */
+        }
+         .cta-button {
+            background-color: #3182CE; /* Accent Blue */
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #2B6CB0; /* Darker Accent Blue */
+            transform: translateY(-2px);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #3182CE; /* Accent blue */
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+        .member-stats {
+            background-color: #edf2f7;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">BLN Consulting Group</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="nav-link text-gray-600">About Us</a>
+                <a href="#team" class="nav-link text-gray-600">Our Team</a>
+                <a href="#services" class="nav-link text-gray-600">Services</a>
+                <a href="#contact" class="nav-link text-gray-600">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#team" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Our Team</a>
+            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Strategic Insights. Measurable Results.</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">BLN Consulting Group partners with businesses to navigate complex challenges, unlock potential, and achieve sustainable growth through expert financial and management accounting solutions.</p>
+            <a href="#contact" class="cta-button font-semibold py-3 px-8 rounded-lg text-lg shadow-lg">Partner With Us</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">About BLN Consulting Group</h2>
+            </div>
+            <div class="max-w-3xl mx-auto text-center text-gray-700 space-y-6">
+                <p class="text-lg leading-relaxed">BLN Consulting Group is a dedicated team of experienced professionals committed to empowering organizations with robust management accounting systems and strategic financial guidance. We understand that in today's dynamic business environment, clarity in financial operations is paramount to success.</p>
+                <p class="text-lg leading-relaxed">Our mission is to transform financial data into actionable insights, helping our clients make informed decisions, optimize performance, and achieve their strategic objectives. We pride ourselves on delivering tailored solutions that address the unique challenges and opportunities of each client we serve.</p>
+                 <p class="text-lg leading-relaxed">With a focus on practical strategies and sustainable improvements, we work collaboratively with your team to implement changes that yield tangible results, ensuring your business is well-equipped for future growth and profitability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">Meet Our Expert Team</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Driven by passion and expertise, our consultants are the cornerstone of our success.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Team Member Card: Kong Soukeang -->
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden" data-member-id="ks">
+                    <div class="p-6 text-center">
+                        <img src="https://placehold.co/120x120/EBF8FF/3182CE?text=KS" alt="Kong Soukeang" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Kong Soukeang</h3>
+                        <p class="text-blue-600">Lead Consultant</p>
+                    </div>
+                    <div class="member-stats hidden p-4 text-sm text-gray-700 text-left">
+                        <p><strong>Expertise:</strong> Strategic planning, financial modeling, business transformations.</p>
+                        <p><strong>Focus:</strong> Leading clients to achieve significant performance improvements.</p>
+                    </div>
+                </div>
+                <!-- Team Member Card: Chhen Yongphing -->
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden" data-member-id="cy">
+                     <div class="p-6 text-center">
+                        <img src="https://placehold.co/120x120/E6FFFA/2C7A7B?text=CY" alt="Chhen Yongphing" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Chhen Yongphing</h3>
+                        <p class="text-blue-600">Senior Analyst</p>
+                    </div>
+                    <div class="member-stats hidden p-4 text-sm text-gray-700 text-left">
+                        <p><strong>Expertise:</strong> Data-driven market analysis, performance metrics.</p>
+                        <p><strong>Focus:</strong> Identifying key trends and actionable insights from complex data.</p>
+                    </div>
+                </div>
+                <!-- Team Member Card: Por Simkiry -->
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden" data-member-id="ps">
+                    <div class="p-6 text-center">
+                        <img src="https://placehold.co/120x120/FEF3C7/B45309?text=PS" alt="Por Simkiry" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Por Simkiry</h3>
+                        <p class="text-blue-600">Financial Strategist</p>
+                    </div>
+                    <div class="member-stats hidden p-4 text-sm text-gray-700 text-left">
+                        <p><strong>Expertise:</strong> Financial structuring, investment strategy, risk management.</p>
+                        <p><strong>Focus:</strong> Optimizing capital allocation for long-term value creation.</p>
+                    </div>
+                </div>
+                <!-- Team Member Card: Thou Bun Seyha -->
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden" data-member-id="tb">
+                     <div class="p-6 text-center">
+                        <img src="https://placehold.co/120x120/F3E8FF/6B46C1?text=TB" alt="Thou Bun Seyha" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Thou Bun Seyha</h3>
+                        <p class="text-blue-600">Process Optimization Expert</p>
+                    </div>
+                    <div class="member-stats hidden p-4 text-sm text-gray-700 text-left">
+                        <p><strong>Expertise:</strong> Workflow analysis, system improvements, operational efficiency.</p>
+                        <p><strong>Focus:</strong> Streamlining processes to reduce waste and enhance productivity.</p>
+                    </div>
+                </div>
+                <!-- Team Member Card: Ly Menghak -->
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden" data-member-id="lm">
+                    <div class="p-6 text-center">
+                        <img src="https://placehold.co/120x120/FCE7F3/DB2777?text=LM" alt="Ly Menghak" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Ly Menghak</h3>
+                        <p class="text-blue-600">Costing Specialist</p>
+                    </div>
+                     <div class="member-stats hidden p-4 text-sm text-gray-700 text-left">
+                        <p><strong>Expertise:</strong> Cost accounting, unit cost analysis, budget control.</p>
+                        <p><strong>Focus:</strong> Implementing robust costing systems for better financial control.</p>
+                    </div>
+                </div>
+                <!-- Team Member Card: Taing Rithydevid -->
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden" data-member-id="tr">
+                    <div class="p-6 text-center">
+                        <img src="https://placehold.co/120x120/F0FFF4/2F855A?text=TR" alt="Taing Rithydevid" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-1">Taing Rithydevid</h3>
+                        <p class="text-blue-600">Investment Analyst</p>
+                    </div>
+                    <div class="member-stats hidden p-4 text-sm text-gray-700 text-left">
+                        <p><strong>Expertise:</strong> Investment appraisal, portfolio analysis, market research.</p>
+                        <p><strong>Focus:</strong> Providing data-backed recommendations for strategic investments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">Our Core Services</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">We provide a comprehensive suite of management accounting services designed to enhance your financial clarity and operational efficiency.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Profitability Analysis</h3>
+                    <p class="text-gray-600 leading-relaxed">Deep dive into your cost structures and revenue streams to identify opportunities for profit maximization and sustainable growth.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                     <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM21 21l-5.197-5.197" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Cost Management</h3>
+                    <p class="text-gray-600 leading-relaxed">Implement effective costing systems and strategies to control expenses, improve efficiency, and enhance your bottom line.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                     <div class="service-icon">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Accounting System Design</h3>
+                    <p class="text-gray-600 leading-relaxed">Develop and implement robust accounting systems, including coding and double-entry bookkeeping, for accurate financial reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">Get In Touch</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">Ready to enhance your business's financial performance? Let's discuss how BLN Consulting Group can help.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-xl">
+                <form id="contactForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company (Optional)</label>
+                        <input type="text" name="company" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full cta-button font-semibold py-3 px-6 rounded-lg text-lg shadow-md">Send Message</button>
+                    </div>
+                    <div id="form-feedback" class="mt-4 text-center"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg font-semibold mb-2">BLN Consulting Group</p>
+            <p class="mb-4">Empowering Your Financial Success.</p>
+            <p class="text-sm">&copy; <span id="currentYear"></span> BLN Consulting Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open before scrolling
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Set current year in footer
+        const currentYearElement = document.getElementById('currentYear');
+        if(currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+
+        // Contact Form basic feedback
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('form-feedback');
+
+        if (contactForm && formFeedback) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual submission for this demo
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (!name || !email || !message) {
+                    formFeedback.innerHTML = '<p class="text-red-500">Please fill out all required fields.</p>';
+                    return;
+                }
+                
+                formFeedback.innerHTML = '<p class="text-green-600">Thank you for your message! We will get back to you soon.</p>';
+                contactForm.reset(); 
+
+                setTimeout(() => {
+                    formFeedback.innerHTML = ''; 
+                }, 5000);
+            });
+        }
+
+        // Team member stats toggle
+        const teamCards = document.querySelectorAll('.team-card');
+        teamCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Close any already open stat boxes from other cards
+                teamCards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        const otherStats = otherCard.querySelector('.member-stats');
+                        if (otherStats && !otherStats.classList.contains('hidden')) {
+                            otherStats.classList.add('hidden');
+                        }
+                    }
+                });
+
+                // Toggle the clicked card's stat box
+                const stats = card.querySelector('.member-stats');
+                if (stats) {
+                    stats.classList.toggle('hidden');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
